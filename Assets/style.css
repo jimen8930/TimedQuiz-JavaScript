@@ -9,7 +9,7 @@ body {
     width: 100vw;
     height: 100vw;
     justify-content:center;
-    align-items: center;
+    align-items:center;
     background-color: aqua;
 }
 
@@ -25,5 +25,8 @@ body {
 .btn.grid {}
 
 p {
-
+    font-size: 20px;
+    padding: 10px;
+    justify-content:center;
+    display: flex
 }
