@@ -1,9 +1,19 @@
-var startButton = document.querySelector("")
+var startButton = document.querySelector("#start-btn")
+
+startButton.addEventListener("click", startQuiz)
 //I need varible for my questions ex: var questions =
 //I need a score box
-//I need a timer on the left of the screen
+//I need a timer on the left of the screen and I need the timer to countdown from 60 seconds.
+var count = 60
+function showCount() {
+  count --;
+}
+//I need the timer to reduce time when the user gets the answer wrong.
 //I need a function to start the quiz.
+//I need to hide the start quiz button and disappear. 
 function startQuiz() {
+  console.log('Started Quiz');
+  
 
 }
 //I need a function for the question.
