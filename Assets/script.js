@@ -1,13 +1,19 @@
 var startButton = document.querySelector("#start-btn")
-var resultsButton = document.querySelector("submit-btn")
+var resultsButton = document.querySelector("#submit-btn")
 var timerEl = document.querySelector("#timer")
+var viewScoresButton = document.querySelector("#view-scores")
 var secondsLeft = 60
 var timerId
 var questionIndex = 0
-var answersContainerEl = document.body.querySelector("#answers-buttons");
-answersContainerEl.addEventListener("click", "button", function(event){
-  var currentChoice = event.target
-  currentChoice.value === questions[questionIndex].answer
+var answersContainerEl = document.body.querySelector("#answer-buttons");
+answersContainerEl.addEventListener("click", function(event){
+  var currentChoice = event.target.textContent
+
+  console.log(currentChoice)
+  if(currentChoice === questions[questionIndex].answer) {
+   console.log("Elizabeth nailed this")
+  }
+//..notations the objects to the left of the dot. The objects property to right of the dot.
 })
 
 //I need an event listener for method for when the buttons that are clicked. 
@@ -108,6 +114,19 @@ function answerChoice() {
     console.log(element)
   }
 }
+
+function viewScores() {
+  viewScoresButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    removeEls(timerEl, startButton);
+    displayAllScores();
+    removeEls(viewScoresBtn);
+    clearScoresBtn();
+    goBackBtn();
+    viewScores()
+  });
+}
+
 //I need an event listener for method for when the buttons that are clicked. 
 
 //I need an array for the questions. 
