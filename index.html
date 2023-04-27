@@ -15,27 +15,31 @@
     <h1>Coding Quiz Challenge</h1>
 </header>
 <!--I need navigation with a class-->
-<nav></nav>
+<nav>
+    <div id="js_timer">
+        <div id="timer">
+    </div>
+</nav>
 <!--I need div with a class="container"-->
 <!--I might insert an id for questions containers-->
 <!--I need a paragraph explaining or giving directions for the quiz.-->
 <p>Try to answer the following questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by 10 seconds.</p>
 <!--I need a start button with text start quiz-->
 <button id="start-btn" class="start-btn btn">Start Quiz</button>
-<!--My buttons need an id and class-->
-
+<button id="submit-btn" class="submit-btn btn">Submit</button>
+<!--My buttons need an id and class--> 
 <section class="container">
-   
+
     <!--I need an id for question not sure where to place it. -->
     <div id="question">Question</div>
     <div id="answer-buttons" class="button-grid">
-        <button class="btn">Answer A</button>
-        <button class="btn">Answer B</button>
-        <button class="btn">Answer C</button>
-        <button class="btn">Answer D</button>
+        <button id="choice-1" class="btn">Answer A</button>
+        <button id="choice-2" class="btn">Answer B</button>
+        <button id="choice-3" class="btn">Answer C</button>
+        <button id="choice-4" class="btn">Answer D</button>
     </div>
 </section>
 <!--I need a script tag-->
- <script src="script.js"></script>
+ <script src="./Assets/script.js"></script>
 </body>
 </html>
