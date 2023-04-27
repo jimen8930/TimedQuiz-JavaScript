@@ -4,6 +4,11 @@ var timerEl = document.querySelector("#timer")
 var secondsLeft = 60
 var timerId
 var questionIndex = 0
+var answersContainerEl = document.body.querySelector("#answers-buttons");
+answersContainerEl.addEventListener("click", "button", function(event){
+  var currentChoice = event.target
+  currentChoice.value === questions[questionIndex].answer
+})
 
 //I need an event listener for method for when the buttons that are clicked. 
 startButton.addEventListener("click", startQuiz)
