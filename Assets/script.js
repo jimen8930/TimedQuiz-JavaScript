@@ -1,21 +1,22 @@
-var startButton = document.querySelector("#start-btn")
-var resultsButton = document.querySelector("#submit-btn")
-var timerEl = document.querySelector("#timer")
-var viewScoresButton = document.querySelector("#view-scores")
-var secondsLeft = 60
-var timerId
-var questionIndex = 0
-var answersContainerEl = document.body.querySelector("#answer-buttons");
+let startButton = document.querySelector("#start-btn")
+let resultsButton = document.querySelector("#submit-btn")
+let timerEl = document.querySelector("#timer")
+let viewScoresButton = document.querySelector("#view-scores")
+let secondsLeft = 60
+let timerId
+let questionIndex = 0
+let answersContainerEl = document.body.querySelector("#answer-buttons");
 answersContainerEl.addEventListener("click", function(event){
   var currentChoice = event.target.textContent
 
   console.log(currentChoice)
   if(currentChoice === questions[questionIndex].answer) {
-   console.log("Elizabeth nailed this")
-  }
-//..notations the objects to the left of the dot. The objects property to right of the dot.
-})
+   console.log("Elizabeth nailed this");
+   
+  } 
 
+})
+//..notations the objects to the left of the dot. The objects property to right of the dot.
 //I need an event listener for method for when the buttons that are clicked. 
 startButton.addEventListener("click", startQuiz)
 //I tried to insert an event listener for submit button but got an error.
@@ -23,7 +24,7 @@ resultsButton.addEventListener("click", submitButton)
 //I need varible for my questions ex: var questions =
 //I need a score box
 //I need a timer on the left of the screen and I need the timer to countdown from 60 seconds.
-var questions= [
+let questions= [
   {
     question: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
@@ -79,20 +80,21 @@ function clockTick () {
 
   if (secondsLeft <=0) {
     clearInterval(timerEl);
-    alert("Time is up!")
+    
+    
 
   }
 }
 function submitButton() {
-  console.log("Initials Submitted");
+  
   submitButton();
 //I need to find a way to insert a box for initials and submit and I need the submit button hidden and reaapear at the end.
 }
 //I need a function for the question.
 function nextQuestion () {
 
-var currentQuestion=questions[questionIndex]
-var titleEl=document.getElementById('question')
+let currentQuestion=questions[questionIndex]
+let titleEl=document.getElementById('question')
 titleEl.textContent=currentQuestion.question
 
 for (let i = 0; i < questions.length; i++) {
@@ -104,28 +106,9 @@ for (let i = 0; i < questions.length; i++) {
 //I need a timer at the top of the screen maybe to the left.
 //I need the questions to continue to pop up after the question has been answered. May be for loop.
 
-//My answer choices need a function. Added function but need help.
-function answerChoice() {
-  var selectChoice=choices[0]
-  var choiceEl=document.getElementById('choice')
-  choiceEl.textContent=selectChoice.choice
-  for (let i = 0; i < questions.length; i++) {
-    const element = questions[i].choices[i];
-    console.log(element)
-  }
-}
 
-function viewScores() {
-  viewScoresButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    removeEls(timerEl, startButton);
-    displayAllScores();
-    removeEls(viewScoresBtn);
-    clearScoresBtn();
-    goBackBtn();
-    viewScores()
-  });
-}
+
+
 
 //I need an event listener for method for when the buttons that are clicked. 
 
