@@ -14,6 +14,7 @@ answersContainerEl.addEventListener("click", function(event){
    console.log("Elizabeth nailed this");
    
   } 
+  
 
 })
 //..notations the objects to the left of the dot. The objects property to right of the dot.
@@ -74,11 +75,13 @@ function startQuiz() {
   nextQuestion ()
   
 }
+//I need something to keep score.
+let score = 0
 function clockTick () {
   secondsLeft--
   timerEl.textContent=secondsLeft
 
-  if (secondsLeft <=0) {
+  if (secondsLeft <=0 ) {
     clearInterval(timerEl);
     
     
@@ -92,7 +95,6 @@ function submitButton() {
 }
 //I need a function for the question.
 function nextQuestion () {
-
 let currentQuestion=questions[questionIndex]
 let titleEl=document.getElementById('question')
 titleEl.textContent=currentQuestion.question
@@ -103,6 +105,18 @@ for (let i = 0; i < questions.length; i++) {
   
 }
 }
+for (let i = 0; i < questions[questionIndex].choices.length; i++) {
+  const element = document.createElement("button");
+element.textContent = questions[questionIndex].choices[i];
+document.getElementById("answer-buttons").append(element);
+}
+if (element.textContent = questions[questionIndex].choices) {
+  score += secondsLeft;
+} else {
+  score -= 10;
+  secondsLeft = secondsLeft - 15;
+}
+
 //I need a timer at the top of the screen maybe to the left.
 //I need the questions to continue to pop up after the question has been answered. May be for loop.
 
