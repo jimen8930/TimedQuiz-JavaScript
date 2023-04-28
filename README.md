@@ -1,5 +1,6 @@
 # TimedQuiz-JavaScript
 
+
 I developed this quiz to learn how to manipulate DOM elements using JavaScript.
 
 -In this project you will see multiple functions to activate several buttons.
@@ -14,3 +15,5 @@ The files that were used are the following;
 JavaScript
 HTML
 CSS
+
+![Screen Shot 2023-04-27 at 11 32 48 PM](https://user-images.githubusercontent.com/128547615/235048106-72cd7d65-1bed-44be-b3fa-b93aa7d4d453.png)
